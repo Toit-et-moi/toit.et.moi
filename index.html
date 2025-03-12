@@ -16,106 +16,62 @@
             font-size: 20px;
         }
         header {
-            background-color: #1c1c1c;
-            color: #f1a64c;
-            padding: 40px;
-            font-size: 32px;
-            font-weight: bold;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-        }
-        .siret-info {
-            font-size: 16px;
-            font-style: italic;
-            color: #f1a64c;
-            margin-top: 5px;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-        }
-        nav ul li {
-            display: inline;
-            margin: 0 20px;
-        }
-        nav a {
-            color: #1c1c1c;
-            text-decoration: none;
-            font-size: 24px;
-        }
-        section {
-            padding: 60px 30px;
-        }
-        footer {
-            background-color: #1c1c1c;
-            color: #f1a64c;
-            padding: 20px;
-            margin-top: 20px;
-            font-size: 24px;
-        }
-        .title {
-            font-weight: bold;
-            font-style: italic;
-            font-size: 44px;
-        }
-        .subtitle {
-            font-weight: bold;
-            font-size: 44px;
-        }
-        .text {
-            font-size: 24px;
-            margin-bottom: 40px;
-        }
-        .highlight {
-            font-weight: bold;
-            font-size: 24px;
-        }
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-            gap: 10px;
-            padding: 20px;
-        }
-        .gallery img {
-            width: 100%;
-            height: 150px;
-            object-fit: cover;
-            border-radius: 8px;
-            transition: transform 0.3s ease-in-out, z-index 0.3s;
-        }
-        .gallery img:hover {
-            transform: scale(2);
-            z-index: 10;
-            position: relative;
-        }
-	    @media (max-width: 768px) {
-            header {
-                padding: 20px; /* Réduire le padding du header pour les petits écrans */
-                font-size: 24px; /* Réduire la taille de la police */
-            }
+    background-color: #1c1c1c;
+    color: #f1a64c;
+    padding: 40px;
+    font-size: 32px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
 
-            header img {
-                height: 100px; /* Réduire la taille des images dans le header */
-            }
+header img {
+    width: auto;
+    height: 150px; /* Limite la taille des images */
+    margin-bottom: 20px; /* Espacement entre les images et le texte */
+}
 
-            .siret-info {
-                font-size: 14px; /* Réduire la taille de la police pour les infos SIRET */
-            }
+header h1, header p {
+    margin: 0;
+}
 
-            .title, .subtitle {
-                font-size: 32px; /* Réduire la taille des titres */
-            }
+.siret-info {
+    font-size: 16px;
+    font-style: italic;
+    color: #f1a64c;
+    margin-top: 5px;
+}
 
-            .text {
-                font-size: 20px; /* Réduire la taille du texte */
-            }
+/* Media query pour les écrans mobiles */
+@media (max-width: 768px) {
+    header {
+        padding: 20px; /* Réduire le padding du header pour les petits écrans */
+        font-size: 24px; /* Réduire la taille de la police */
+    }
 
-            .gallery {
-                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Adapter la galerie */
-            }
-        }
+    header img {
+        height: 100px; /* Réduire la taille des images dans le header */
+        margin-bottom: 10px; /* Espacement plus petit entre les images */
+    }
+
+    .siret-info {
+        font-size: 14px; /* Réduire la taille de la police pour les infos SIRET */
+    }
+
+    .title, .subtitle {
+        font-size: 32px; /* Réduire la taille des titres */
+    }
+
+    .text {
+        font-size: 20px; /* Réduire la taille du texte */
+    }
+
+    .gallery {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Adapter la galerie */
+    }
+}
     </style>
 </head>
 <body>

@@ -90,6 +90,32 @@
             z-index: 10;
             position: relative;
         }
+	    @media (max-width: 768px) {
+            header {
+                padding: 20px; /* Réduire le padding du header pour les petits écrans */
+                font-size: 24px; /* Réduire la taille de la police */
+            }
+
+            header img {
+                height: 100px; /* Réduire la taille des images dans le header */
+            }
+
+            .siret-info {
+                font-size: 14px; /* Réduire la taille de la police pour les infos SIRET */
+            }
+
+            .title, .subtitle {
+                font-size: 32px; /* Réduire la taille des titres */
+            }
+
+            .text {
+                font-size: 20px; /* Réduire la taille du texte */
+            }
+
+            .gallery {
+                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Adapter la galerie */
+            }
+        }
     </style>
 </head>
 <body>

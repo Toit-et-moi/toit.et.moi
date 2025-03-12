@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toit et Moi - Charpente et Travaux Bois</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #f4a018;
+            color: #1c1c1c;
+            font-family: 'Georgia', serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            font-size: 20px;
+        }
+        header {
+            background-color: #1c1c1c;
+            color: #f1a64c;
+            padding: 40px;
+            font-size: 32px;
+            font-weight: bold;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        .siret-info {
+            font-size: 16px;
+            font-style: italic;
+            color: #f1a64c;
+            margin-top: 5px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+        nav a {
+            color: #1c1c1c;
+            text-decoration: none;
+            font-size: 24px;
+        }
+        section {
+            padding: 60px 30px;
+        }
+        footer {
+            background-color: #1c1c1c;
+            color: #f1a64c;
+            padding: 20px;
+            margin-top: 20px;
+            font-size: 24px;
+        }
+        .title {
+            font-weight: bold;
+            font-style: italic;
+            font-size: 44px;
+        }
+        .subtitle {
+            font-weight: bold;
+            font-size: 44px;
+        }
+        .text {
+            font-size: 24px;
+            margin-bottom: 40px;
+        }
+        .highlight {
+            font-weight: bold;
+            font-size: 24px;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 10px;
+            padding: 20px;
+        }
+        .gallery img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s ease-in-out, z-index 0.3s;
+        }
+        .gallery img:hover {
+            transform: scale(2);
+            z-index: 10;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <img src="Carte Visite 2025.jpg" alt="Carte de visite Toit et Moi" style="height: 150px;">
+            
+            <div>
+                <h1>Toit et Moi...</h1>
+                <p>Charpente & Travaux Bois - 15 ans d'expérience</p>
+                <p class="siret-info">SIRET : 92293454200015 | Code NAF : 4391A</p>
+            </div>
+
+            <img src="5.1 Travail de charpente.jpg" alt="Travail de charpente" style="height: 150px;">
+        </div>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Réalisations</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <section id="services">
+        <h2>Nos Services</h2>
+        <p class="title">Bienvenue chez Toit et Moi</p>
+        <p class="subtitle">L’Art du Bois et des Charpentes</p>
+        
+        <p class="text">Fort de 15 ans d’expérience et d’un savoir-faire affûté, Toit et Moi met le bois au service de vos projets. Animé par une véritable passion, je mets mon savoir-faire à votre service pour créer des espaces qui vous ressemblent avec passion et précision.</p>
+        
+        <p class="text">Charpente robuste, couverture impeccable, huisseries posées au millimètre, et bois rénové avec caractère — je ne me contente pas de construire, je crée. Terrasses qui respirent l'été, cabanons et pergolas sur mesure... Chaque projet est une signature.</p>
+    
+        <p class="text">Mais Toit et Moi, c’est aussi l’audace de repousser les limites du bois. J’ai eu le privilège de <span class="highlight">concevoir et réaliser un skatepark privatif de 300 m² taillé pour l'adrénaline</span>, un projet sur mesure qui allie technicité et créativité.</p>
+    
+        <p class="text">Ancré à Vieux Boucau, Toit et Moi c’est l’alliance entre la tradition artisanale et une approche moderne, pour des réalisations uniques et durables.</p>
+    
+        <p class="highlight">Ensemble, donnons forme à vos envies !</p> 
+
+        <p>📞 Devis gratuit – Contactez-moi ! Si je ne suis pas disponible par téléphone, envoyez-moi un mail avec vos coordonnées, votre disponibilité et un bref descriptif de votre projet. Je vous répondrai rapidement !<p> 
+        <p>➡️ Intervention sur Vieux Boucau et son périmètre ~35km. Au-delà au cas par cas.</p>
+    </section>
+    
+    <section id="portfolio">
+        <h2>Nos Réalisations</h2>
+        <p>Quelques photos de nos projets récents.</p>
+        <div class="gallery">
+            <img src="1.1 Accueil.jpg" alt="">
+            <img src="1.2 Accueil.jpg" alt="">
+            <img src="1.3 Accueil.jpg" alt="">
+            <img src="1.4 Accueil.jpg" alt="">
+            <img src="1.5 Accueil.jpg" alt="">
+            <img src="1.6 Accueil.jpg" alt="">
+            <img src="2.1 Lodge.jpg" alt="">
+            <img src="2.2 Lodge.jpg" alt="">
+            <img src="2.3 Lodge.jpg" alt="">
+            <img src="2.4 Lodge.jpg" alt="">
+            <img src="2.5 Lodge.jpg" alt="">
+            <img src="3.1 Skatepark.jpg" alt="">
+            <img src="3.2 Skatepark.jpg" alt="">
+            <img src="3.3 Skatepark.jpg" alt="">
+            <img src="3.4 Skatepark.jpg" alt="">
+            <img src="3.5 Skatepark.jpg" alt="">
+            <img src="3.6 Skatepark.jpg" alt="">
+            <img src="4.1 Meuble.jpg" alt="">
+            <img src="4.2 Meuble.jpg" alt="">
+	    <img src="4.3 Meuble.jpg" alt="">
+	    <img src="4.4 Meuble.jpg" alt="">
+	    <img src="4.5 Meuble.jpg" alt="">
+            <img src="5.1b Travail de charpente.jpg" alt="">
+            <img src="5.2 Travail de charpente.jpg" alt="">
+            <img src="6.1 Cabanon.jpg" alt="">
+            <img src="6.2 Cabanon.jpg" alt="">
+	    <img src="6.3 Cabanon.jpg" alt="">
+            <img src="6.4 Cabanon.jpg" alt="">
+	    <img src="6.5 Cabanon.jpg" alt="">
+            <img src="6.6 Cabanon.jpg" alt="">
+            <img src="7 Etagères.jpg" alt="">
+            <img src="8 Verrou.jpg" alt="">
+        </div>
+    </section>
+    
+    <section id="contact">
+        <h2>Contactez-moi</h2>
+	<p> Lukas Lafitte</p>
+        <p>📞 Téléphone : 06 19 42 39 35</p>
+        <p>📧 Email : toit.et.moi40@gmail.com</p>
+        <p>📍 Localisation : Vieux Boucau et environs</p>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Toit & Moi - Tous droits réservés.</p>
+    </footer>
+</body>
+</html>

@@ -1,191 +1,312 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Toit et Moi - Charpente et Travaux Bois</title>
-    <link rel="stylesheet" href="styles.css">
     <style>
-        body {
-            background-color: #f4a018;
-            color: #1c1c1c;
-            font-family: 'Georgia', serif;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-            font-size: 20px;
+      body {
+        background-color: #f4a018;
+        color: #1c1c1c;
+        font-family: 'Georgia', serif;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        font-size: 20px;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+      header {
+        background-color: #1c1c1c;
+        color: #f1a64c;
+        padding: 30px;
+        font-size: 28px;
+        font-weight: bold;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      header .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap;
+        width: 100%;
+      }
+      header h1 {
+        text-align: center;
+        width: 100%;
+        margin: 0;
+      }
+      header .header-content img {
+        height: 140px;
+        border-radius: 8px;
+        transition: transform 0.3s;
+      }
+      header .header-content img:hover {
+        transform: scale(1.05);
+      }
+      .siret-info {
+        font-size: 14px;
+        font-style: italic;
+        color: #f1a64c;
+        margin-top: 5px;
+      }
+      nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 15px 0;
+      }
+      nav ul li {
+        display: inline;
+        margin: 0 15px;
+      }
+      nav a {
+        color: #1c1c1c;
+        text-decoration: none;
+        font-size: 22px;
+        transition: color 0.3s;
+      }
+      nav a:hover {
+        color: #f1a64c;
+      }
+      section {
+        padding: 50px 20px;
+        flex: 1;
+      }
+      footer {
+        background-color: #1c1c1c;
+        color: #f1a64c;
+        padding: 15px;
+        margin-top: 15px;
+        font-size: 22px;
+        box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+      .title {
+        font-weight: bold;
+        font-style: italic;
+        font-size: 40px;
+        margin-bottom: 15px;
+      }
+      .subtitle {
+        font-weight: bold;
+        font-size: 32px;
+        margin-bottom: 15px;
+      }
+      .text {
+        font-size: 22px;
+        margin-bottom: 30px;
+        line-height: 1.6;
+      }
+      .highlight {
+        font-weight: bold;
+        font-size: 22px;
+      }
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 10px;
+        padding: 15px;
+      }
+      .gallery img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 8px;
+        transition: transform 0.3s ease-in-out, z-index 0.3s;
+      }
+      .gallery img:hover {
+        transform: scale(2);
+        z-index: 10;
+        position: relative;
+      }
+      @media (max-width: 768px) {
+        .gallery img:nth-child(odd):hover {
+          left: 50%;
+        }
+        .gallery img:nth-child(even):hover {
+          right: 50%;
+        }
+      }
+      @media (max-width: 1024px) {
+        header .header-content img {
+          height: 110px;
         }
         header {
-            background-color: #1c1c1c;
-            color: #f1a64c;
-            padding: 40px;
-            font-size: 32px;
-            font-weight: bold;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
+          font-size: 24px;
         }
-        .siret-info {
-            font-size: 16px;
-            font-style: italic;
-            color: #f1a64c;
-            margin-top: 5px;
+      }
+      @media (max-width: 768px) {
+        header {
+          padding: 15px;
+          font-size: 20px;
         }
-        nav ul {
-            list-style: none;
-            padding: 0;
+        header .header-content {
+          flex-direction: row;
+          justify-content: center;
+          gap: 10px;
+        }
+        header .header-content img {
+          height: 90px;
         }
         nav ul li {
-            display: inline;
-            margin: 0 20px;
+          display: block;
+          margin: 8px 0;
         }
         nav a {
-            color: #1c1c1c;
-            text-decoration: none;
-            font-size: 24px;
+          font-size: 18px;
         }
         section {
-            padding: 60px 30px;
+          padding: 25px 10px;
         }
         footer {
-            background-color: #1c1c1c;
-            color: #f1a64c;
-            padding: 20px;
-            margin-top: 20px;
-            font-size: 24px;
+          font-size: 18px;
         }
         .title {
-            font-weight: bold;
-            font-style: italic;
-            font-size: 44px;
+          font-size: 28px;
         }
         .subtitle {
-            font-weight: bold;
-            font-size: 44px;
+          font-size: 24px;
         }
-        .text {
-            font-size: 24px;
-            margin-bottom: 40px;
-        }
+        .text,
         .highlight {
-            font-weight: bold;
-            font-size: 24px;
+          font-size: 18px;
         }
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-            gap: 10px;
-            padding: 20px;
-        }
-        .gallery img {
-            width: 100%;
-            height: 150px;
-            object-fit: cover;
-            border-radius: 8px;
-            transition: transform 0.3s ease-in-out, z-index 0.3s;
-        }
-        .gallery img:hover {
-            transform: scale(2);
-            z-index: 10;
-            position: relative;
-        }
+      }
     </style>
-</head>
-<body>
-   <header>
-        <div style="display: flex; justify-content: space-between; align-items: center;">
-            <img src="Carte Visite 2025.jpg" alt="Carte de visite Toit et Moi" style="height: 150px;">
-            
-            <div>
-                <h1>Toit et Moi...</h1>
-                <p>Charpente & Travaux Bois - 15 ans d'expérience</p>
-                <p class="siret-info">SIRET : 92293454200015 | Code NAF : 4391A</p>
-            </div>
-
-            <img src="5.1 Travail de charpente.jpg" alt="Travail de charpente" style="height: 150px;">
+  </head>
+  <body>
+    <header>
+      <h1>Toit et Moi...</h1>
+      <div class="header-content">
+        <img src="Carte Visite 2025.jpg" alt="Carte de visite Toit et Moi" />
+        <div>
+          <p>Charpente & Travaux Bois - 15 ans d'expérience</p>
+          <p class="siret-info">SIRET : 92293454200015 | Code NAF : 4391A</p>
         </div>
+        <img src="5.1 Travail de charpente.jpg" alt="Travail de charpente" />
+      </div>
     </header>
-    
-    <nav>
-        <ul>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#portfolio">Réalisations</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-    
-    <section id="services">
-        <h2>Mes Services</h2>
-        <p class="title">Bienvenue chez Toit et Moi</p>
-        <p class="subtitle">L’Art du Bois et des Charpentes</p>
-        
-        <p class="text">Fort de 15 ans d’expérience et d’un savoir-faire affûté, Toit et Moi met le bois au service de vos projets. Animé par une véritable passion, je mets mon savoir-faire à votre service pour créer des espaces qui vous ressemblent avec passion et précision.</p>
-        
-        <p class="text">Charpente robuste, couverture impeccable, huisseries posées au millimètre, et bois rénové avec caractère — je ne me contente pas de construire, je crée. Terrasses qui respirent l'été, cabanons et pergolas sur mesure... Chaque projet est une signature.</p>
-    
-        <p class="text">Mais Toit et Moi, c’est aussi l’audace de repousser les limites du bois. J’ai eu le privilège de <span class="highlight">concevoir et réaliser un skatepark privatif de 300 m² taillé pour l'adrénaline</span>, un projet sur mesure qui allie technicité et créativité.</p>
-    
-        <p class="text">Ancré à Vieux Boucau, Toit et Moi c’est l’alliance entre la tradition artisanale et une approche moderne, pour des réalisations uniques et durables. Toutes mes réalisations sont effectuées en parfaite conformité avec les règles d’urbanisme transmises, garantissant des projets sans mauvaise surprise et respectueux de leur environnement."</p>
-    
-        <p class="highlight">Ensemble, donnons forme à vos envies !</p> 
 
-        <p>📞 Devis gratuit – Contactez-moi ! Si je ne suis pas disponible par téléphone, envoyez-moi un mail avec vos coordonnées, vos disponibilités et un bref descriptif de votre projet. Je vous répondrai rapidement !<p> 
-        <p>➡️ Intervention sur Vieux Boucau et son périmètre ~35km. Au-delà au cas par cas.</p>
+    <nav>
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Réalisations</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <section id="services">
+      <h2>Mes Services</h2>
+      <p class="title">Bienvenue chez Toit et Moi</p>
+      <p class="subtitle">L’Art du Bois et des Charpentes</p>
+
+      <p class="text">
+        Fort de 15 ans d’expérience et d’un savoir-faire affûté, Toit et Moi met
+        le bois au service de vos projets. Animé par une véritable passion, je
+        mets mon savoir-faire à votre service pour créer des espaces qui vous
+        ressemblent avec passion et précision.
+      </p>
+
+      <p class="text">
+        Charpente robuste, couverture impeccable, huisseries posées au
+        millimètre, et bois rénové avec caractère — je ne me contente pas de
+        construire, je crée. Terrasses qui respirent l'été, cabanons et pergolas
+        sur mesure... Chaque projet est une signature.
+      </p>
+
+      <p class="text">
+        Mais Toit et Moi, c’est aussi l’audace de repousser les limites du bois.
+        J’ai eu le privilège de
+        <span class="highlight"
+          >concevoir et réaliser un skatepark privatif de 300 m² taillé pour
+          l'adrénaline</span
+        >, un projet sur mesure qui allie technicité et créativité.
+      </p>
+
+      <p class="text">
+        Ancré à Vieux Boucau, Toit et Moi c’est l’alliance entre la tradition
+        artisanale et une approche moderne, pour des réalisations uniques et
+        durables. Toutes mes réalisations sont effectuées en parfaite conformité
+        avec les règles d’urbanisme transmises, garantissant des projets sans
+        mauvaise surprise et respectueux de leur environnement."
+      </p>
+
+      <p class="highlight">Ensemble, donnons forme à vos envies !</p>
+
+      <p>
+        📞 Devis gratuit – Contactez-moi ! Si je ne suis pas disponible par
+        téléphone, envoyez-moi un mail avec vos coordonnées, vos disponibilités
+        et un bref descriptif de votre projet. Je vous répondrai rapidement !
+      </p>
+      <p>
+        ➡️ Intervention sur Vieux Boucau et son périmètre ~35km. Au-delà au cas
+        par cas.
+      </p>
     </section>
-    
+
     <section id="portfolio">
-        <h2>Mes Réalisations</h2>
-        <p>Quelques photos de projet.</p>
-        <div class="gallery">
-            <img src="1.1 Accueil.jpg" alt="">
-            <img src="1.2 Accueil.jpg" alt="">
-            <img src="1.3 Accueil.jpg" alt="">
-            <img src="1.4 Accueil.jpg" alt="">
-            <img src="1.5 Accueil.jpg" alt="">
-            <img src="1.6 Accueil.jpg" alt="">
-            <img src="2.1 Lodge.jpg" alt="">
-            <img src="2.2 Lodge.jpg" alt="">
-            <img src="2.3 Lodge.jpg" alt="">
-            <img src="2.4 Lodge.jpg" alt="">
-            <img src="2.5 Lodge.jpg" alt="">
-            <img src="3.1 Skatepark.jpg" alt="">
-            <img src="3.2 Skatepark.jpg" alt="">
-            <img src="3.3 Skatepark.jpg" alt="">
-            <img src="3.4 Skatepark.jpg" alt="">
-            <img src="3.5 Skatepark.jpg" alt="">
-            <img src="3.6 Skatepark.jpg" alt="">
-            <img src="3.7 Skatepark.jpg" alt="">
-            <img src="3.8 Skatepark.jpg" alt="">
-            <img src="3.9 Skatepark.jpg" alt="">
-            <img src="4.1 Meuble.jpg" alt="">
-            <img src="4.2 Meuble.jpg" alt="">
-	    <img src="4.3 Meuble.jpg" alt="">
-	    <img src="4.4 Meuble.jpg" alt="">
-	    <img src="4.5 Meuble.jpg" alt="">
-            <img src="5.1b Travail de charpente.jpg" alt="">
-            <img src="5.2 Travail de charpente.jpg" alt="">
-            <img src="6.1 Cabanon.jpg" alt="">
-            <img src="6.2 Cabanon.jpg" alt="">
-	    <img src="6.3 Cabanon.jpg" alt="">
-            <img src="6.4 Cabanon.jpg" alt="">
-	    <img src="6.5 Cabanon.jpg" alt="">
-            <img src="6.6 Cabanon.jpg" alt="">
-            <img src="7 Etagères.jpg" alt="">
-            <img src="8 Verrou.jpg" alt="">
-        </div>
+      <h2>Mes Réalisations</h2>
+      <p>Quelques photos de projet.</p>
+      <div class="gallery">
+        <img src="1.1 Accueil.jpg" alt="1.1 Accueil" />
+        <img src="1.2 Accueil.jpg" alt="1.2 Accueil" />
+        <img src="1.3 Accueil.jpg" alt="1.3 Accueil" />
+        <img src="1.4 Accueil.jpg" alt="1.4 Accueil" />
+        <img src="1.5 Accueil.jpg" alt="1.5 Accueil" />
+        <img src="1.6 Accueil.jpg" alt="1.6 Accueil" />
+        <img src="2.1 Lodge.jpg" alt="2.1 Lodge" />
+        <img src="2.2 Lodge.jpg" alt="2.2 Lodge" />
+        <img src="2.3 Lodge.jpg" alt="2.3 Lodge" />
+        <img src="2.4 Lodge.jpg" alt="2.4 Lodge" />
+        <img src="2.5 Lodge.jpg" alt="2.5 Lodge" />
+        <img src="3.1 Skatepark.jpg" alt="3.1 Skatepark" />
+        <img src="3.2 Skatepark.jpg" alt="3.2 Skatepark" />
+        <img src="3.3 Skatepark.jpg" alt="3.3 Skatepark" />
+        <img src="3.4 Skatepark.jpg" alt="3.4 Skatepark" />
+        <img src="3.5 Skatepark.jpg" alt="3.5 Skatepark" />
+        <img src="3.6 Skatepark.jpg" alt="3.6 Skatepark" />
+        <img src="3.7 Skatepark.jpg" alt="3.7 Skatepark" />
+        <img src="3.8 Skatepark.jpg" alt="3.8 Skatepark" />
+        <img src="3.9 Skatepark.jpg" alt="3.9 Skatepark" />
+        <img src="4.1 Meuble.jpg" alt="4.1 Meuble" />
+        <img src="4.2 Meuble.jpg" alt="4.2 Meuble" />
+        <img src="4.3 Meuble.jpg" alt="4.3 Meuble" />
+        <img src="4.4 Meuble.jpg" alt="4.4 Meuble" />
+        <img src="4.5 Meuble.jpg" alt="4.5 Meuble" />
+        <img
+          src="5.1b Travail de charpente.jpg"
+          alt="5.1b Travail de charpente"
+        />
+        <img
+          src="5.2 Travail de charpente.jpg"
+          alt="5.2 Travail de charpente"
+        />
+        <img src="6.1 Cabanon.jpg" alt="6.1 Cabanon" />
+        <img src="6.2 Cabanon.jpg" alt="6.2 Cabanon" />
+        <img src="6.3 Cabanon.jpg" alt="6.3 Cabanon" />
+        <img src="6.4 Cabanon.jpg" alt="6.4 Cabanon" />
+        <img src="6.5 Cabanon.jpg" alt="6.5 Cabanon" />
+        <img src="6.6 Cabanon.jpg" alt="6.6 Cabanon" />
+        <img src="7 Etagères.jpg" alt="7 Etagères" />
+        <img src="8 Verrou.jpg" alt="8 Verrou" />
+      </div>
     </section>
-    
+
     <section id="contact">
-        <h2>Contactez-moi</h2>
-	<p> Lukas Lafitte</p>
-        <p>📞 Téléphone : 06 19 42 39 35</p>
-        <p>📧 Email : toit.et.moi40@gmail.com</p>
-        <p>📍 Localisation : Vieux Boucau et environs</p>
+      <h2>Contactez-moi</h2>
+      <p>Lukas Lafitte</p>
+      <p>📞 Téléphone : 06 19 42 39 35</p>
+      <p>📧 Email : toit.et.moi40@gmail.com</p>
+      <p>📍 Localisation : Vieux Boucau et environs</p>
     </section>
-    
+
     <footer>
-        <p>&copy; 2025 Toit & Moi - Tous droits réservés.</p>
+      <p>&copy; 2025 Toit & Moi - Tous droits réservés.</p>
     </footer>
-</body>
+  </body>
 </html>

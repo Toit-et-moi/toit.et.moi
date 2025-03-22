@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://toit-et-moi.github.io/toit.et.moi/sitemap.xml

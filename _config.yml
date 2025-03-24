@@ -1,2 +1,30 @@
+title: Toit & Moi
+description: >-
+  Charpente, couverture, rénovation bois et meubles, terrasses, skateparks, cabanons et pergolas à Vieux-Boucau-les-Bains.
+baseurl: "/toit.et.moi" # Important pour GitHub Pages (mettre "" si le site est à la racine)
+url: "https://toit-et-moi.github.io" # L'URL de ton site
+theme: minima # Ou un autre thème Jekyll compatible
+
+# Plugins nécessaires
 plugins:
-  - jekyll-sitemap
+  - jekyll-sitemap  # Génère automatiquement un sitemap.xml
+  - jekyll-seo-tag  # Améliore le référencement SEO
+  - jekyll-feed      # Génère un flux RSS (facultatif)
+
+# Options pour la génération du site
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/
+
+# Configuration des collections (facultatif, selon ton contenu)
+collections:
+  projets:
+    output: true
+    permalink: /projets/:path/
+
+# Options pour Jekyll
+markdown: kramdown
+permalink: pretty

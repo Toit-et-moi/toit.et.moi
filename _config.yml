@@ -2,7 +2,7 @@ title: Toit & Moi
 description: >-
   Charpente, couverture, rénovation bois et meubles, terrasses, skateparks, cabanons et pergolas à Vieux-Boucau-les-Bains.
 baseurl: "/toit.et.moi" # Important pour GitHub Pages (mettre "" si le site est à la racine)
-url: "https://toit-et-moi.github.io" # L'URL de ton site
+url: "https://toit-et-moi.github.io/toit.et.moi/" # L'URL de ton site
 theme: minima # Ou un autre thème Jekyll compatible
 
 # Plugins nécessaires
